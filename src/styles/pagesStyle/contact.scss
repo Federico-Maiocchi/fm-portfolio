@@ -1,0 +1,55 @@
+@import "../variables/variables";
+
+// Pages - Contact
+.bg-contact {
+  background-color: $bg-site;
+  height: 100%;
+  background-image: url("/src/assets/img-contact.png");
+  background-size: cover; /* Rende l'immagine adattabile */
+  background-position: left; /* Centra l'immagine */
+  background-repeat: no-repeat; /* Evita ripetizioni */
+}
+
+.card-contact {
+  padding: 30px 0;
+  animation: fadeIn 1s ease-in; // Aggiungi questa riga per l'animazione di apparizione
+  
+  .item-card-contact {
+    padding: 10px 0;
+
+    .item-title {
+      color: white;
+      font-size: 25px;
+      font-weight: 600;
+      animation: fadeIn 1.2s ease-in; // Aggiungi questa riga per l'animazione di apparizione
+    }
+
+    .item-link {
+      font-size: 22px;
+      border-radius: 5px;
+      color: $darker-pastel-blue;
+      text-decoration: underline;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .item-title-social {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    animation: fadeIn 1.2s ease-in; // Aggiungi questa riga per l'animazione di apparizione
+  }
+
+  .icon-social {
+    font-size: 40px;
+    color: $darker-pastel-blue;
+
+    &:hover {
+      color: white;
+      animation: pulse 0.5s; // Aggiungi questa riga per l'animazione di pulsazione al passaggio del mouse
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "../variables/variables";
+
+// About
+.about-container {
+  .about-item {
+    // padding: 25px;
+    animation: fadeIn 1.2s ease-in; // Aggiungi questa riga per l'animazione di apparizione
+
+    /* Allinea le sezioni dispari a sinistra */
+    &:nth-child(odd) {
+      padding: 25px;
+      background-color: $pastel-light-blue;
+      border: 2px solid $darker-pastel-blue;
+      border-radius: 20px 200px 50px 20px;
+      align-self: flex-start;
+      text-align: left;
+      animation: slideInLeft 1s ease-out; // Aggiungi questa riga per un'animazione di scorrimento
+    }
+
+    /* Allinea le sezioni pari a destra */
+    &:nth-child(even) {
+      padding: 25px;
+      border-radius: 200px 20px 20px 50px;
+      border: 2px solid $pastel-light-blue;
+      background-color: $darker-pastel-blue;
+      align-self: flex-end;
+      text-align: right;
+      animation: slideInRight 1s ease-out; // Aggiungi questa riga per un'animazione di scorrimento
+    }
+
+    .about-item-title {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .about-item-description {
+      font-size: 18px;
+    }
+  }
+}
+
+.dev-skills {
+  display: flex;
+  flex-wrap: wrap; /* Permette agli item di andare a capo se necessario */
+  gap: 10px; /* Spazio tra i badge */
+  margin: 10px 0; /* Margine superiore e inferiore */
+  // padding: 12px; /* Padding per evitare che tocchino i bordi */
+}
+
+.dev-skill-item {
+  background-color: $pastel-light-blue;
+  padding: 5px 10px;
+  border-radius: 22px;
+  font-weight: 700;
+  max-width: 150px; /* Imposta una larghezza massima per ogni badge */
+  text-align: center; /* Centra il testo all'interno di ogni item */
+  white-space: nowrap; /* Impedisce che il testo vada a capo all'interno di un badge */
+  overflow: hidden; /* Nasconde il testo che non sta dentro il badge */
+  text-overflow: ellipsis; /* Aggiunge "..." se il testo è troppo lungo */
+}
+
+@media (max-width: 768px) {
+  .dev-skill-item {
+    max-width: 120px; /* Riduci la larghezza dei badge sui dispositivi mobili */
+  }
+}

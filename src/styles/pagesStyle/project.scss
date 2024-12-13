@@ -1,0 +1,82 @@
+@import "../../styles/variables/variables";
+
+.bg-project {
+  background-color: $bg-site;
+  background-image: url("/src/assets/bg-second.png");
+  background-size: cover; /* Rende l'immagine adattabile */
+  background-position: center; /* Centra l'immagine */
+  background-repeat: no-repeat; /* Evita ripetizioni */
+}
+
+.go-back-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  //margin-top: 20px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.project-container {
+  border-radius: 22px;
+  padding: 20px;
+  animation: scaleUp 0.8s ease-in; // Aggiungi questa riga per l'animazione di ingrandimento
+
+  .project-header {
+    .project-title {
+      text-align: center;
+      color: white;
+      font-size: 45px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      animation: fadeIn 1s ease-in; // Aggiungi questa riga per l'animazione di apparizione
+    }
+  }
+
+  .project-body {
+    .project-image-mobile {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Mantiene il rapporto di aspetto */
+      animation: fadeIn 1s ease-in-out; // Aggiungi questa riga per l'animazione di apparizione
+    }
+
+    .project-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Mantiene il rapporto di aspetto */
+      
+      animation: fadeIn 1s ease-in-out; // Aggiungi questa riga per l'animazione di apparizione
+    }
+
+    .carousel-button {
+      font-size: 50px;
+      color: white;
+      border: none;
+      padding: 2px 15px;
+      cursor: pointer;
+
+      &:hover {
+        color: $darker-pastel-blue;
+      }
+    }
+   
+    .project-description {
+      font-size: 18px;
+      line-height: 2;
+      color: white;
+    }
+  }
+
+  .project-body-subtitle {
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+  }
+}

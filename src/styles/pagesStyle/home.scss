@@ -1,0 +1,248 @@
+@import "../utilities/utilities";
+@import "../variables/variables";
+
+.home {
+  color: white;
+  background-color: $bg-site;
+
+  .strong-word {
+    font-weight: bold;
+    color: $darker-pastel-blue;
+  }
+
+  .section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+  
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  // .about {
+  //   // Effetti aggiuntivi per la sezione about
+  // }
+  
+  .skills {
+    .dev-skill-item {
+      animation: fadeInZoom 0.8s ease-in-out;
+    }
+  }
+  
+  .hobby {
+    .img-hobby {
+      animation: slideIn 1.2s ease-out;
+    }
+  }
+
+  //HERO
+  .hero {
+    background-image: url("/src/assets/bg-hero.png");
+    background-size: cover; /* Rende l'immagine adattabile */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita ripetizioni */
+    padding: 80px 0px;
+    color: white;
+
+    .title-job {
+      font-weight: 600;
+      font-size: 30px;
+      color: white;
+      border-radius: 20px 0px 0px 50px;
+      animation: slideIn 1s ease-out; /* Aggiungi questa riga */
+    }
+
+    .name {
+      color: white;
+      font-size: 65px;
+      font-weight: 600;
+    }
+
+    .typing-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+
+      .terminal-icon {
+        font-size: 30px;
+        font-weight: bolder;
+        color: $darker-pastel-blue; /* Colore del terminale */
+        animation: pulse 1s infinite; /* Pulsazione infinita */
+      }
+
+      .typing-text {
+        font-family: "Courier New", Courier, monospace;
+        white-space: pre-line;
+        overflow: hidden;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #ffffff; /* Colore del testo */
+      }
+
+      .blinking-cursor {
+        display: inline-block;
+        width: 10px;
+        height: 20px;
+        background-color: $darker-pastel-blue;
+        animation: blink 1s steps(2, start) infinite;
+      }
+    }
+
+    .icon-social {
+      color: white;
+      font-size: 50px;
+
+      &:hover {
+        color: $darker-pastel-blue;
+        animation: pulse 0.5s;
+      }
+    }
+
+    .img-home {
+      //background-color: black;
+      border: 3px solid $darker-pastel-blue;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: 100% 5%; /* Centra l'immagine */
+      border-radius: 20px 20px 20px 100px;
+      animation: fadeInZoom 1s ease-in; /* Aggiungi questa riga */
+      box-shadow: 0 0 10px #fff, /* Effetto luce principale */ 0 0 20px #00ccff,
+        /* Glow colorato */ 0 0 30px #00ccff, 0 0 40px #00ccff; /* Effetto glow più intenso */
+    }
+  }
+
+  // ABOUT
+  .about {
+    background-image: url("/src/assets/bg-second.png");
+    background-size: cover; /* Rende l'immagine adattabile */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita ripetizioni */
+    padding: 170px 0px 50px 0px;
+    color: white;
+
+    .img-about {
+      width: 100%; /* Imposta la larghezza al 100% del contenitore */
+      height: auto; /* Imposta l'altezza al 100% del contenitore */
+      aspect-ratio: 1; /* Mantiene un rapporto 1:1 per garantire la rotondità */
+      object-fit: cover; /* Adatta l'immagine per riempire il cerchio */
+      overflow: hidden; /* Nasconde eventuali parti fuori dal cerchio */
+      border: 1px solid #00ccff; /* Colore del bordo */
+      border-radius: 15px 15px 80px 15px;
+      box-shadow: 0 0 10px #fff, /* Effetto luce principale */ 0 0 20px #00ccff,
+        /* Glow colorato */ 0 0 30px #00ccff, 0 0 40px #00ccff; /* Effetto glow più intenso */
+      transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transizione morbida per hover */
+    }
+
+    .desc-about {
+      font-size: 18px;
+      line-height: 2;
+    }
+  }
+
+  //SKILLS
+  .skills {
+    padding: 150px 0px 50px 0px;
+    background-image: url("../../assets/skills.png");
+    background-size: 70%; /* Rende l'immagine adattabile */
+    background-position: 190%; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita ripetizioni */
+
+    .icon-code {
+      font-size: 290px;
+      color: white;
+    }
+
+    .img-skills {
+      width: 500px;
+      height: 800px;
+      animation: fadeInZoom 1s ease-in; /* Aggiungi questa riga */
+    }
+
+    .dev-skills {
+      gap: 10px; /* Spazio tra i badge */
+      margin: 10px 0; /* Margine superiore e inferiore */
+
+      .dev-skill-item {
+        background-color: $site-blue-light;
+        padding: 5px 25px;
+        border-radius: 22px;
+        font-weight: 700;
+        text-align: center; /* Centra il testo all'interno di ogni item */
+      }
+    }
+  }
+
+  // HOBBY
+  .hobby {
+    background-color: $bg-site;
+    //height: 500px;
+    padding: 50px 0px 50px 0px;
+
+    .img-hobby {
+      width: 100%; /* Puoi regolare la dimensione come preferisci */
+      height: auto; /* Assicurati che altezza e larghezza siano uguali */
+      object-fit: cover; /* Garantisce che l'immagine riempia il cerchio */
+      overflow: hidden; /* Nasconde eventuali parti fuori dal cerchio */
+      border: 3px solid $darker-pastel-blue;
+      border-radius: 15px 15px 80px 15px;
+      box-shadow: 0 0 10px #fff, /* Effetto luce principale */ 0 0 20px #00ccff,
+        /* Glow colorato */ 0 0 30px #00ccff, 0 0 40px #00ccff; /* Effetto glow più intenso */
+    }
+
+    .desc-hobby {
+      font-size: 18px;
+      line-height: 2;
+    }
+  }
+}
+
+
+
+/* Definizione delle animazioni */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Pulsazione dell'icona */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Ingrandisce l'icona */
+  }
+  100% {
+    transform: scale(1);
+  }
+}

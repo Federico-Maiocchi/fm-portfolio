@@ -1,0 +1,22 @@
+@import "../../styles/variables/variables";
+
+// Pages - Projects
+.bg-projects {
+    background-color: $bg-site;
+    background-image: url("/src/assets/bg-second.png");
+    background-size: cover; /* Rende l'immagine adattabile */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita ripetizioni */
+    padding: 30px 0;
+}
+
+
+.projects-container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Modifica il valore per regolare lo spazio */
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}

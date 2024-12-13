@@ -1,0 +1,65 @@
+// Reset Styles
+* {
+  box-sizing: border-box; // Include padding e border nel calcolo della larghezza
+  margin: 0; // Rimuove margini predefiniti
+  padding: 0; // Rimuove padding predefiniti
+}
+
+html,
+body {
+  height: 100%; // Imposta altezza al 100%
+  font-family: Arial, sans-serif; // Font di base
+  line-height: 1.5; // Interlinea base
+  color: #333; // Colore del testo
+  background-color: #fff; // Colore di sfondo
+  //background-color: aquamarine;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal; // Disabilita il grassetto predefinito
+  margin: 0; // Rimuove margini predefiniti
+}
+
+ul,
+ol {
+  list-style: none; // Rimuove i puntini delle liste
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none; // Rimuove la sottolineatura dai link
+  color: inherit; // Usa il colore ereditato
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%; // Rende le immagini responsive
+  height: auto; // Mantiene le proporzioni
+}
+
+table {
+  border-collapse: collapse; // Unisce i bordi delle tabelle
+  width: 100%; // Imposta larghezza al 100%
+}
+
+button {
+  border: none; // Rimuove il bordo predefinito
+  background: none; // Rimuove il background predefinito
+  cursor: pointer; // Cambia il cursore a pointer
+}
+
+input,
+textarea {
+  font-family: inherit; // Eredita il font dal body
+  font-size: inherit; // Eredita la dimensione del font
+}

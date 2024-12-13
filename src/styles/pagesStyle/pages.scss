@@ -1,0 +1,124 @@
+@import "../../styles/variables/variables";
+
+.btn:hover {
+  animation: pulse 0.5s infinite; /* Bagliore pulsante continuo */
+}
+
+// General
+.glow-title {
+  font-size: 3rem; /* Dimensione del testo */
+  font-weight: bold; /* Grassetto */
+  color: #fff; /* Colore base del testo */
+  //text-align: center; /* Allinea il testo al centro */
+  text-shadow: 0 0 10px #fff, /* Effetto luce principale */ 0 0 20px #00ccff,
+    /* Glow colorato */ 0 0 30px #00ccff, 0 0 40px #00ccff;
+}
+
+.pages-title {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in-out; // Aggiungi questa riga per animazione
+}
+
+.btn {
+  background-color: $site-blue-light; /* Colore di sfondo iniziale */
+  color: white;
+  //border: 2px solid white;
+  padding: 10px 35px;
+  border-radius: 22px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease; /* Transizioni fluide */
+
+  &:hover {
+    background-color: $darker-pastel-blue; /* Cambia lo sfondo al passaggio */
+    color: black; /* Cambia il colore del testo */
+    box-shadow: 0 0 10px #fff, 0 0 20px #00ccff, 0 0 30px #00ccff; /* Effetto di bagliore */
+    transform: scale(1.05); /* Leggero ingrandimento per enfatizzare l'hover */
+  }
+}
+
+.btn-standard {
+  //background-color: $darker-pastel-blue;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  transition: transform 0.3s ease; // Aggiungi una transizione per l'hover
+
+  &:hover {
+    background-color: $darker-pastel-blue;
+    color: black;
+    border: 2px solid white;
+    animation: pulse 0.5s; // Aggiungi questa riga per l'animazione al passaggio del mouse
+  }
+}
+
+.btn-cv {
+  //background-color: $darker-pastel-blue;
+  background-color: white;
+  //border: 2px solid white;
+  color: black;
+  transition: transform 0.3s ease; // Aggiungi una transizione per l'hover
+
+  &:hover {
+    background-color: $darker-pastel-blue;
+    color: black;
+    border: 2px solid white;
+    animation: pulse 0.5s; // Aggiungi questa riga per l'animazione al passaggio del mouse
+  }
+}
+
+// Definizione delle animazioni
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,185 @@
+@import "../utilities/utilities";
+@import "../variables/variables";
+
+nav {
+  background-color: $site-dark-blue;
+  color: white;
+  padding: 10px 0;
+
+  .hamburger-menu {
+    font-weight: 700;
+    font-size: 30px;
+    padding: 5px 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+
+    &:hover {
+      color: white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+      border-radius: 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 10%;
+        width: 80%;
+        height: 2px;
+        background-color: white;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    // Aggiungi qui la classe .active per applicare gli stessi stili
+    .active {
+      background-color: darken($darker-pastel-blue, 15%);
+      color: white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); // Ombra
+      transform: scale(1.5); // Leggero effetto di zoom
+      border-radius: 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 10%;
+        width: 80%;
+        height: 2px;
+        background-color: white;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .about-nav {
+    cursor: pointer;
+  }
+
+  ul {
+    margin: 0;
+
+    li {
+      padding: 5px 10px;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      border-radius: 12px;
+
+      &:hover {
+        padding: 5px 10px;
+        color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+        border-radius: 20px;
+        text-shadow: 0 0 10px #fff,
+          /* Effetto luce principale */ 0 0 20px #00ccff,
+          /* Glow colorato */ 0 0 30px #00ccff, 0 0 40px #00ccff;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 10%;
+          width: 80%;
+          height: 2px;
+          background-color: white;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      // Aggiungi qui la classe .active per applicare gli stessi stili
+      .active {
+        background-color: darken($darker-pastel-blue, 15%);
+        text-shadow: 0 0 10px #00ccff,
+          /* Effetto luce principale */ 0 0 20px #00ccff,
+          /* Glow colorato */ 0 0 30px #00ccff, 0 0 40px #00ccff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); // Ombra
+        transform: scale(1.05); // Leggero effetto di zoom
+        border-radius: 20px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 10%;
+          width: 80%;
+          height: 2px;
+          background-color: $darker-pastel-blue;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-weight: 700;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+
+    &:hover {
+      color: white;
+      transform: translateY(-3px);
+      border-radius: 20px;
+    }
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: lighten($darker-pastel-blue, 40%);
+    }
+  }
+}
+
+.offcanvas {
+  background-image: url("/src/assets/bg-second.png");
+  background-size: cover; /* Rende l'immagine adattabile */
+  background-position: center; /* Centra l'immagine */
+  background-repeat: no-repeat; /* Evita ripetizioni */
+  color: white;
+  padding: 20px;
+
+  .btn-close {
+    background-color: darken($darker-pastel-blue, 15%);
+    color: white;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: lighten($darker-pastel-blue, 20%);
+      transform: scale(1.1);
+    }
+  }
+
+  .offcanvas-body {
+    ul {
+      li {
+        font-size: 25px;
+        font-weight: 800;
+        padding: 10px 0;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          color: white;
+        }
+
+        .active {
+          background-color: darken($darker-pastel-blue, 15%);
+          color: white;
+          transform: scale(1.05);
+          border-radius: 12px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}

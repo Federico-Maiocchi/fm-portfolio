@@ -139,7 +139,7 @@ function Home() {
                     {/* cv */}
                     <div className="d-flex justify-content-center">
                       <a
-                        href="/public/cv.pdf"
+                        href={`${import.meta.env.BASE_URL}cv.pdf`}
                         download="CV-Federico-Maiocchi"
                         className="btn btn-cv"
                       >
@@ -256,7 +256,7 @@ function Home() {
               </div>
               <div className="col-12 col-md-8">
                 <h1 className="text-center text-md-start pages-title glow-title">
-                  HOBBY
+                  HOBBIES
                 </h1>
                 <p className="desc-hobby text-center text-md-start mb-5">
                   Quando non smanetto con il codice, mi dedico alla{" "}

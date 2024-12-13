@@ -1,4 +1,4 @@
-import './index.css'
+import "./index.css";
 import "./styles/reset/reset.scss";
 import "./styles/utilities/_utilities.scss";
 import "./styles/variables/_variables.scss";
@@ -22,43 +22,46 @@ import Contact from "./pages/Contact/Contact.jsx";
 import Project from "./pages/Projects/project.jsx";
 
 //Router list
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      //HOME
-      {
-        path: "/",
-        element: <Home />, // pagina home
-      },
-      //ABOUT
-      // {
-      //   path: "/about",
-      //   element: <About />, // pagina about
-      // },
-      //PROJECTS
-      {
-        path: "/projects",
-        element: <Projects />, // pagina progetti
-      },
-      //PROJECTS/PROJECTID
-      // {
-      //   path: "/projects/:projectID",
-      //   element: <Project/>
-      // },
-      {
-        path: "/projects/:slug",
-        element: <Project />, // pagina progetto specifico
-      },
-      //CONTACT
-      {
-        path: "contact",
-        element: <Contact />, // pagina contact
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        //HOME
+        {
+          path: "/",
+          element: <Home />, // pagina home
+        },
+        //ABOUT
+        // {
+        //   path: "/about",
+        //   element: <About />, // pagina about
+        // },
+        //PROJECTS
+        {
+          path: "/projects",
+          element: <Projects />, // pagina progetti
+        },
+        //PROJECTS/PROJECTID
+        // {
+        //   path: "/projects/:projectID",
+        //   element: <Project/>
+        // },
+        {
+          path: "/projects/:slug",
+          element: <Project />, // pagina progetto specifico
+        },
+        //CONTACT
+        {
+          path: "/contact",
+          element: <Contact />, // pagina contact
+        },
+      ],
+    },
+  ],
+  { basename: "/fm-portfolio" } // Prefisso automatico per tutte le rotte
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

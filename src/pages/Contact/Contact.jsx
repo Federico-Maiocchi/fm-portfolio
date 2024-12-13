@@ -12,7 +12,7 @@ function Contact() {
               {/* cv */}
               <div className="mb-3">
                 <a
-                  href="/public/cv.pdf"
+                  href={`${import.meta.env.BASE_URL}cv.pdf`}
                   download="CV-Federico-Maiocchi"
                   className="btn btn-cv"
                 >
